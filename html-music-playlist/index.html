@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-01-31</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #menu {
+            padding: 0.5rem;
+            float: left;
+            width: auto;
+            height: auto;
+            background-color: black;
+            box-sizing: border-box;
+            position: absolute;
+            top: 3rem;
+            right: 1rem;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+
+
+        }
+
+        a,
+        a::after,
+        a:active,
+        a::before {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        iframe {
+            z-index: 0;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            position: absolute;
+            background-color: black;
+        }
+
+        .row {
+            margin-bottom: 0.5rem;
+        }
+
+        .row:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+
+        
+    -->
+
+    <div id="menu">
+        left
+    </div>
+
+    <iframe name='frame' src="https://www.youtube.com/embed/ydlmygcZWLA?controls=0" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <script>
+        var list = [
+            { id: 'ydlmygcZWLA', title: 'in dreams', artist: 'Dosii' },
+            { id: 'eAP5RZe-IDo', title: 'No Problem', artist: 'Dvwn' },
+            { id: 'oBKpJiVEcnU', title: 'Breath', artist: 'Park Hyo Shin' },
+            { id: '_Cfz5Mi1u8k', title: '아마도 그건', artist: 'Crush, Loco' },
+            { id: 'R3Fwdnij49o', title: 'Above the time', artist: 'IU' },
+            { id: '83IfZhO4Pd0', title: '기억을 걷는 시간', artist: '넬' },
+            { id: 'IDD5_z3kKCU', title: '지켜줄게', artist: '백예린' },
+            { id: 'IUoTjkS242c', title: 'Wi Ing Wi Ing', artist: 'Hyukoh' },
+            { id: 'XcRCatv8PDM', title: ' 나비보벳따우 가사 & 한글해석', artist: 'K.K. House' },
+            { id: 'xRbPAVnqtcs', title: 'Travel', artist: 'Bol4' },
+            { id: 'MOWDb2TBYDg', title: 'Happy', artist: 'Pharrell Williams ( feat. Minions )' },
+            { id: 'Td3Ts2UNIIU', title: 'City night', artist: 'Seoulites' },
+            { id: 's0nDrOM0BDU', title: 'Vanishing Paycheck', artist: 'Stella Jang' },
+            { id: 'HKb-mIky31o', title: 'Sleeping beauty', artist: 'Epik High' },
+            { id: 'XUR8QByF2As', title: 'Star', artist: 'Heize'}  
+        ];
+        var menu = document.getElementById('menu');
+        var html = "";
+        for (var i = 0; i < list.length; i++) {
+            html += `<div class='row'><a target='frame' href="https://www.youtube.com/embed/${list[i].id}?controls=0">${list[i].title} / ${list[i].artist}</a></div>`;
+        }
+        menu.innerHTML = html;
+    </script>
+</body>
+
+</html>
